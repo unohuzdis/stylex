@@ -1,37 +1,54 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      items: []
-    };
-  }
+// class App extends Component {
+//   constructor() {
+//     super();
 
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(response => response.json())
-      .then(photos => {
-        return photos.map((item) => {
-          const price = Math.floor(Math.random() * 200) + 10; // price ranges from 10 to 200
-          return Object.assign({}, item, { price });
-        })
-      })
-      .then(newPhotos => {this.setState({ items: newPhotos })});
-  }
+//     this.state = {
+//       items: []
+//     };
+//   }
 
-  render() {
-    const { items } = this.state;
+//   componentDidMount() {
+//     fetch('https://jsonplaceholder.typicode.com/photos')
+//       .then(response => response.json())
+//       .then(photos => {
+//         return photos.map((item) => {
+//           const price = Math.floor(Math.random() * 200) + 10; // price ranges from 10 to 200
+//           return Object.assign({}, item, { price });
+//         })
+//       })
+//       .then(newPhotos => {this.setState({ items: newPhotos })});
+//   }
 
-    return (
-      <div className='App'>
-        {items.map(item => <h1 key={item.id}>{item.title}</h1>)}
-      </div>
-    );
-  }
+//   render() {
+//     const { items } = this.state;
+
+//     return (
+//       <div className='App'>
+//         {items.map(item => <h1 key={item.id}>{item.title}</h1>)}
+//       </div>
+//     );
+//   }
+// }
+
+import HomePage from './pages/homepage/homepage.component';
+
+function App() {
+  return (
+    <div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={HomePage} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-
 export default App;
+
