@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+// import { connect } from 'react-redux';
+
+import Header from './components/header/header.component';
 import './App.css';
 
 
@@ -40,12 +43,11 @@ import HomePage from './pages/homepage/homepage.component';
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route path='/shop' component={HomePage} />
-        </Switch>
-      </BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={HomePage} />
+      </Switch>
     </div>
   );
 }

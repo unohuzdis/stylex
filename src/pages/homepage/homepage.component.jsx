@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // import SHOP_DATA from './shop.data.js';
 
@@ -52,8 +52,8 @@ class HomePage extends Component {
 
         return (
             <div className='homepage-container'>
-                {items.map(({ id, ...otherItemProps }) => (
-                    <ListItem key={id} {...otherItemProps} />
+                {items.map(( item ) => (
+                    <ListItem key={item.id} item={item} />
                 ))}
             </div>
         );
