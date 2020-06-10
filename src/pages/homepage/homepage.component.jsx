@@ -1,30 +1,7 @@
 import React, { Component } from 'react';
 
-// import SHOP_DATA from './shop.data.js';
-
 import ListItem from '../../components/list-item/list-item.component';
 import './homepage.styles.scss';
-
-// class HomePage extends React.Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {
-//             collections: SHOP_DATA
-//         };
-//     }
-
-//     render() {
-//         const { collections } = this.state;
-//         return (
-//             <div className='shop-page'>
-//                 {collections.map(({ id, ...otherCollectionProps }) => (
-//                     <CollectionPreview key={id} {...otherCollectionProps} />
-//                 ))}
-//             </div>
-//         );
-//     }
-// }
 
 class HomePage extends Component {
     constructor() {
