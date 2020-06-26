@@ -13,7 +13,7 @@ const StripeCheckoutButton = ({ price }) => {
     return (
         <StripeCheckout
             label='Pay Now'
-            name='SaaS Checkout Ltd.'
+            name='Stylex Ltd.'
             billingAddress
             shippingAddress
             description={`Your total is $${price}`}
