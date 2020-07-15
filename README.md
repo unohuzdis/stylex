@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Motivation
 
-To brush up my Redux skills, learn Stripe, GraphQL, and create an ecommerce webapp inspired from major brands like Zara, Lululemon, etc.
+To brush up my Redux skills, learn Stripe, GraphQL, and create an ecommerce webapp inspired by major brands like Zara, Lululemon, etc.
 
 ## Available Scripts
 
